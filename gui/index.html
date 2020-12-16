@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Laboratorio remoto</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">LabRemoto<strong>Desktop</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/JackCloudman"  target="_blank" rel="noopener noreferrer">Github</a>
+          </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <button class="btn btn-outline-danger my-2 my-sm-0" id="reiniciar">Reinciar</button>
+        </div>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <iframe style="width:100%;height:800px;" src="http://148.204.59.124:8081/" title="W3Schools Free Online Web Tutorials"></iframe>
+        <h3>Asigna valores GPIO</h3>
+        <form>
+          <div class="row">
+            <div class="col-sm">
+              <h4>LAB0</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab0">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB1</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab1">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB2</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab2">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB3</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab3">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB4</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab4">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB5</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab5">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB6</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab6">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB7</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab7">
+                  <span class="slider round"></span>
+                </label>ON
+            </div>
+            <div class="col-sm">
+              <h4>LAB8</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab8">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB9</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab9">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB10</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab10">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB11</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab11">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB12</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab12">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB13</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab13">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB14</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab14">
+                  <span class="slider round"></span>
+                </label>ON
+                <h4>LAB15</h4>OFF
+                <label class="switch">
+                  <input type="checkbox" id="lab15">
+                  <span class="slider round"></span>
+                </label>ON
+            </div>
+          </div><br>
+        </form>
+        <div class="row">
+          <button style="width:100%;" id="guardar" class="btn btn-primary">Guardar</button>
+          </div>
+      </div>
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./jquery/jquery-3.5.1.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <!-- Cargamos la biblioteca de EEL-->
+    <script src="./eel.js"></script>
+
+
+    <script type="text/javascript">
+      $( "#reiniciar" ).click(function() {
+        eel.reiniciar();
+        alert("Espera unos segundos...");
+      });
+      function alertar(message){
+        alert(message);
+      }
+      function reiniciar(){
+        $('input:checkbox').removeAttr('checked');
+      }
+      $("#guardar").click(function(){
+        var datos = {
+          4: $("#lab0").is(':checked')?"1":"0",
+          14: $("#lab1").is(':checked')?"1":"0",
+          15: $("#lab2").is(':checked')?"1":"0",
+          17: $("#lab3").is(':checked')?"1":"0",
+          18: $("#lab4").is(':checked')?"1":"0",
+          27: $("#lab5").is(':checked')?"1":"0",
+          22: $("#lab6").is(':checked')?"1":"0",
+          23: $("#lab7").is(':checked')?"1":"0",
+          24: $("#lab8").is(':checked')?"1":"0",
+          10: $("#lab9").is(':checked')?"1":"0",
+          9: $("#lab10").is(':checked')?"1":"0",
+          25: $("#lab11").is(':checked')?"1":"0",
+          11: $("#lab12").is(':checked')?"1":"0",
+          8: $("#lab13").is(':checked')?"1":"0",
+          7: $("#lab14").is(':checked')?"1":"0",
+          5: $("#lab15").is(':checked')?"1":"0",
+        }
+        eel.guardar(datos);
+        alert("Espera unos segundos...");
+        console.log(datos);
+      })
+      eel.expose(reiniciar);
+      eel.expose(alertar); // Exponemos esta funcion a Python
+    </script>
+  </body>
+</html>
